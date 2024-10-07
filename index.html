@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Conteúdo Digital</title>
+
+    <!-- analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124031348-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-124031348-1');
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script> -->
+    <!-- estilos -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- CAPA -->
+
+    <!-- modal -->
+    <section class="tela-creditos is-hidden">
+        <div class="container" id="creditos">
+    
+            <div id="estrutura" style="display: none">
+                <!-- Conteúdo da div que você deseja clonar -->
+                <div class="colunas">
+                    <!-- Insira na ID a coleção (CQT, SAE ou SPE) -->
+                    <div class="colecao" id="SPE">
+                        <!-- Insira na ID o segmento (EducacaoInfantil, AnosIniciais, AnosFinais ou EnsinoMedio) -->
+                        <div class="segmento" ID="EnsinoMedio">
+                            <div class="setor diretorGeral"></div>
+                            <div class="setor diretorConteudo"></div>
+                            <div class="setor NCE"></div>
+                            <div class="setor NEL"></div>
+                            <div class="setor NTC"></div>
+                        </div>
+    
+                        <!-- caso não haja créditos de imagem, comentar a div -->
+                        <!--<div class="creditos-imagens">
+                                    <h2 class="cargo">Créditos de imagem:</h2>
+                                    <p class="nome">teste</p>
+                                </div>-->
+                    </div>
+                    <div id="desenvolvimento"></div>
+                </div>
+                <div class="direitos"></div>
+            </div>
+    
+            <script src="js/info-creditos.js"></script>
+    
+            <!--Aqui vai os nomes da equipe do pedagógico e Interações Digitais -->
+            <div class="producaoOeds" style="display: none">
+                <div class="nome" id="nome_andreaB"></div>
+                <div class="cargo" id="cargo_designerInstrucional"></div>
+            </div>
+            <div class="producaoOeds" style="display: none">
+                <div class="nome" id="nome_denyM"></div>
+                <div class="cargo" id="cargo_designerDigital"></div>
+            </div>
+            <div class="producaoOeds" style="display: none">
+                <div class="nome" id="nome_denyM"></div>
+                <div class="cargo" id="cargo_desenvolvedor"></div>
+            </div>
+    
+            <iframe id="iframeCredito" width="100%" height="100%"></iframe>
+        </div>
+        <div class="fechar-creditos">
+            <div class="fechar"></div>
+        </div>
+    </section>
+
+
+<div class="conteudo">
+    <div class="container">
+        <div class="columns is-centered">
+            <a class="button creditos">©</a>
+            <div class="column is-8">
+                <div class="capa"></div>
+            </div>
+
+            <div class="column is-4 flex">
+                <h1>QUAL É O <br>SEU GRAU DE <br><span> ATIVISMO</span>?</h1>
+                <div class="button next">INICIAR</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+   <!-- 
+    <section class="secao capa h" id="capa">
+        <a class="button creditos">©</a>
+        
+        <div class="column is-4 flex">
+            <h1>QUAL É <br>O SEU GRAU <br>DE ATIVISMO?</h1>
+            <div class="button next">INICIAR</div>
+        </div>
+
+    </section>
+
+-->
+    <!-- QUESTAO 1 -->
+
+    <div class="conteudo hidden">
+        <div class="container">
+
+            <div class="questoes">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao">1</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <p class="pergunta">Desde seu surgimento, o conceito de democracia foi evoluindo e certamente há
+                            diferentes visões a respeito do que seja uma democracia plena. Em nossa sociedade,
+                            vivenciamos a chamada democracia representativa, em que elegemos representantes para tomar
+                            decisões em nosso nome. Contudo, nesse sistema, são muitas as vezes em que não há, de fato,
+                            a representação dos interesses da sociedade civil. Nesse contexto, o ativismo é um modo
+                            legítimo e democrático que as pessoas têm de levantar sua voz em defesa de interesses
+                            coletivos que vêm sendo desconsiderados por aqueles que ocupam o poder. A respeito do
+                            ativismo, assinale a alternativa que mais ressoa com o modo como você pensa.</p>
+                        <p class="resposta" data-pos="0" data-val="+5" onclick="calc(this)">Não vejo necessidade de as
+                            pessoas realizarem protestos e manifestações em prol de causas que defendem, já que vivemos
+                            numa democracia representativa, na qual quem deve reivindicar os interesses da sociedade são
+                            seus representantes.</p>
+                        <p class="resposta" data-pos="0" data-val="+10" onclick="calc(this)">Acho totalmente necessária
+                            a participação das pessoas em manifestações, protestos e atos para reivindicar os interesses
+                            da sociedade civil, mas nunca participo de nenhum deles, porque geralmente nada muda.</p>
+                        <p class="resposta" data-pos="0" data-val="+15" onclick="calc(this)">O ativismo das pessoas em
+                            prol de causas sociais, ambientais, políticas e sociais que visem ao bem comum é
+                            imprescindível e serve para levar consciência à sociedade a respeito de pautas que, de outro
+                            modo, não estariam sendo discutidas por não representarem os interesses daqueles que ocupam
+                            o poder.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUESTOES 2-10 - RESULTADO -->
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao ">2</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <div class="img02"></div>
+                        <p class="pergunta">Em 2018, Greta Thunberg, hoje mundialmente conhecida por seu ativismo
+                            ambiental, faltou muitos dias à escola para protestar (sozinha e com apenas um cartaz) em
+                            frente ao parlamento sueco para que medidas urgentes fossem tomadas frente às mudanças
+                            climáticas que ameaçam o futuro das gerações mais novas. Poucos meses depois, Greta foi
+                            ouvida em uma conferência da ONU e inspirou milhares de jovens ao redor do mundo a também
+                            protestar pela justiça climática. A respeito do exemplo de Greta, assinale a alternativa que
+                            melhor traduz seu pensamento.</p>
+                        <p class="resposta" data-pos="1" data-val="+15" onclick="calc(this)">É um exemplo de como é
+                            possível que apenas uma pessoa, ao levantar uma bandeira em prol de uma causa coletiva, pode
+                            impactar milhares de outras e promover reais mudanças.</p>
+                        <p class="resposta" data-pos="1" data-val="+5" onclick="calc(this)">Trata-se de um exemplo
+                            isolado. Greta teve muita sorte por conseguir chamar a atenção para sua demanda. </p>
+                        <p class="resposta" data-pos="1" data-val="+10" onclick="calc(this)">É algo possível somente em
+                            países em que há espaço para que os jovens participem ativamente das discussões sociais,
+                            ambientais e políticas. </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao ">3</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <div class="img03"></div>
+                        <p class="pergunta">Malala é atualmente a pessoa mais jovem a ganhar o Prêmio Nobel da Paz, além
+                            de ser Embaixadora da Consciência da Anistia Internacional. Após ter sofrido a tentativa de
+                            assassinato pelo regime Talibã, ela prosseguiu sua luta com ainda mais determinação. Sua
+                            principal luta é para que todas as crianças tenham direito de ir à escola. No livro Malala:
+                            pelo direito das meninas à educação, a ativista diz o seguinte: “Há quem acredite que cabe
+                            aos outros agir. Mas eu pensei comigo mesma: por que deveria esperar que outra pessoa faça
+                            alguma coisa? Por que não dar, eu mesma, um passo adiante?”. A respeito dessa afirmação,
+                            assinale a alternativa que faz sentido para você.</p>
+                        <p class="resposta" data-pos="2" data-val="+5" onclick="calc(this)">A afirmação de Malala só faz
+                            sentido em seu contexto pessoal, já que somente após ela ficar conhecida mundialmente é que
+                            ela começou a fazer alguma coisa a favor da educação</p>
+                        <p class="resposta" data-pos="2" data-val="+10" onclick="calc(this)">Malala, ao realizar essas
+                            perguntas, deixa claro a necessidade que cada um de nós tem de agir frente aos problemas que
+                            nos acometem.</p>
+                        <p class="resposta" data-pos="2" data-val="+15" onclick="calc(this)">A afirmação de Malala deixa
+                            implícita a necessidade de maior protagonismo em nossas vidas. Não é necessário esperar por
+                            alguém para que algo seja feito. Cada um pode realizar ações práticas, mesmo que simples,
+                            que façam a diferença.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao ">4</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <div class="img04"></div>
+                        <p class="pergunta">De acordo com o relatório da ONU Mapa Mulheres na Política 2019, de 193
+                            países, o Brasil se encontra no 149 lugar no ranking de representatividade feminina na
+                            política. Diante desse dado, em 2020, as organizações #ElasNoPoder, Vamos juntas,
+                            Engajamundo e Vote nelas uniram-se e criaram a campanha #VEMVoteEmMulheres para atuar
+                            digitalmente e conscientizar as pessoas a respeito da necessidade de maior
+                            representatividade feminina na política. Para você, uma campanha como essa</p>
+                        <p class="resposta" data-pos="3" data-val="+5" onclick="calc(this)">Não é necessária. As
+                            mulheres não ocupam espaços de poder político porque não querem.</p>
+                        <p class="resposta" data-pos="3" data-val="+10" onclick="calc(this)">É muito importante. As
+                            mulheres são a maioria no Brasil e devem ser estimuladas a ocupar lugares de poder político
+                            porque é por meio deles que conseguirão defender com mais afinco as pautas que as envolvem
+                            diretamente.</p>
+                        <p class="resposta" data-pos="3" data-val="+15" onclick="calc(this)">É extremamente necessária.
+                            O baixo índice de mulheres ocupando lugares na política acontece devido à exclusão histórica
+                            das mulheres nas decisões de políticas públicas. É mais do que hora de haver uma
+                            representatividade feminina condizente com a demanda da sociedade brasileira. </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUESTAO 05 -->
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao ">5</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <p class="pergunta">Leia com atenção as seguintes manchetes de diferentes jornais em 2020.
+                            Depois, assinale a alternativa que resume seu pensamento a respeito delas.</p>
+                        <div class="img05a"></div>
+                        <p class="referencia">Disponível em:
+                            <a href="https://www.brasildefato.com.br/2020/10/10/uma-mulher-e-morta-a-cada-nove-horas-durante-a-pandemia-no-brasil."
+                                target="_blank"><strong>https://www.brasildefato.com.br/2020/10/10/uma-mulher-e-morta-a-cada-nove-horas-durante-a-pandemia-no-brasil.</strong></a>
+                            Acesso em: 14 fev. 2023.
+                        </p>
+
+                        <div class="img05b"></div>
+                        <p class="referencia">Disponível em:
+                            <a href="https://g1.globo.com/rj/rio-de-janeiro/noticia/2020/10/10/numero-de-chamados-recebidos-pela-pm-no-rj-sobre-agressoes-contra-mulheres-aumentou-30percent-de-junho-a-setembro.ghtml"
+                                target="_blank"><strong>https://g1.globo.com/rj/rio-de-janeiro/noticia/2020/10/10/numero-de-chamados-recebidos-pela-pm-no-rj-sobre-agressoes-contra-mulheres-aumentou-30percent-de-junho-a-setembro.ghtml</strong></a>
+                            . Acesso em: 14 fev. 2023.
+                        </p>
+
+                        <div class="img05c"></div>
+                        <p class="referencia">Disponível em:
+                            <a href="https://oglobo.globo.com/premio-faz-diferenca/boas-acoes-na-pandemia/advogadas-prestam-servico-gratuito-mulheres-vitimas-de-violencia-durante-pandemia-24675467"
+                                target="_blank"><strong>https://oglobo.globo.com/premio-faz-diferenca/boas-acoes-na-pandemia/advogadas-prestam-servico-gratuito-mulheres-vitimas-de-violencia-durante-pandemia-24675467</strong></a>.
+                            Acesso em: 14 fev. 2023.
+                        </p>
+
+                        <p class="resposta" data-pos="4" data-val="+10" onclick="calc(this)">O que as advogadas estão
+                            realizando é um exemplo de ativismo, porque tentam suprir a falta de ações
+                            institucionalizadas e o fazem em prol do coletivo.</p>
+                        <p class="resposta" data-pos="4" data-val="+5" onclick="calc(this)">Se não existem programas
+                            institucionalizados de combate à violência contra a mulher é porque isso não é de fato
+                            necessário</p>
+                        <p class="resposta" data-pos="4" data-val="+15" onclick="calc(this)">Além da ação das advogadas,
+                            são necessárias muitas outras quando se trata do combate à violência contra a mulher.
+                            Passeatas, manifestações e atos são alguns dos meios por meio dos quais a sociedade deve
+                            deixar clara a necessidade de uma política nacional de enfrentamento à violência contra a
+                            mulher.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao ">6</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <p class="pergunta">No começo de 2020, durante atividades no Fórum Econômico Mundial em Davos,
+                            na Suíça, diferentes ativistas do meio ambiente se reuniram para debater o futuro da
+                            humanidade. Em um dos momentos, Greta Thunberg e outras ativistas foram fotografadas lado a
+                            lado. Uma delas é a ativista climática de Uganda, Vanessa Nakate, a única jovem negra da
+                            foto.</p>
+                        <div class="img06"></div>
+                        <p class="pergunta">Acontece que quando a foto foi publicada pela agência de notícias Associated
+                            Press, Vanessa havia sido cortada, abrindo um debate intenso a respeito do racismo. Sobre o
+                            ocorrido, a própria Vanessa escreveu em suas redes que o episódio a fez entender a definição
+                            da palavra racismo. Para ela, a Associated Press, ao cortá-la da imagem, apagou todo um
+                            continente, já que ela era a única representante da África. A respeito do ocorrido, assinale
+                            a alternativa que melhor define o que você faria se por acaso fosse alguma das pessoas que
+                            estão na foto com Vanessa.</p>
+                        <p class="resposta" data-pos="5" data-val="+5" onclick="calc(this)"> Lamentaria o ocorrido, mas
+                            não teria como fazer muita coisa, já que a foto já havia sido publicada sem Vanessa.</p>
+                        <p class="resposta" data-pos="5" data-val="+15" onclick="calc(this)">Iniciaria uma discussão nas
+                            redes sociais a respeito do racismo estrutural e de como a representatividade é extremamente
+                            importante, disseminando uma campanha com a seguinte hashtag: #vanessanakatenafoto</p>
+                        <p class="resposta" data-pos="5" data-val="+10" onclick="calc(this)">Lamentaria o ocorrido em
+                            minhas redes sociais.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao ">7</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <p class="pergunta">O ciberativismo, ou ativismo digital, é o nome dado ao ativismo realizado na
+                            internet. Acontece quando grupos politizados usam as redes sociais para disseminar
+                            informações e reivindicações com a intenção de buscar apoio e adeptos às suas causas;
+                            debater e trocar informações; mobilizar e organizar ações dentro e fora do mundo digital. A
+                            respeito desse tipo de ativismo, assinale a alternativa que, para você, melhor define seu
+                            uso.</p>
+                        <p class="resposta" data-pos="6" data-val="+5" onclick="calc(this)"> De nada adianta protestar
+                            nas redes sociais.</p>
+                        <p class="resposta" data-pos="6" data-val="+10" onclick="calc(this)">Realizar protestos por meio
+                            das redes sociais é valioso e evita que as pessoas tenham que se expor nas ruas ou em atos
+                            isolados.</p>
+                        <p class="resposta" data-pos="6" data-val="+15" onclick="calc(this)">O ativismo digital,
+                            atualmente, é imprescindível, mas deve ser combinado com o ativismo nas ruas, para que a
+                            pressão popular ganhe forma e chegue mais perto de alcançar seus objetivos.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao ">8</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <p class="pergunta">Uma organização chamada Frontline Defenders compila dados de denúncias de
+                            ataques contra ativistas no mundo todo. Em 2019, o relatório anual dessa organização colocou
+                            o Brasil na 4ª posição dos países mais violentos para aqueles que defendem os interesses da
+                            sociedade civil. Ao menos 23 brasileiros ativistas pelos direitos humanos foram mortos em
+                            2019. De acordo com esse relatório, 40% dessas mortes referem-se a pessoas que defendem os
+                            territórios indígenas, além de outros motivos ambientalistas. A respeito desses dados,
+                            assinale a alternativa que melhor traduz seu pensamento.</p>
+                        <p class="resposta" data-pos="7" data-val="+5" onclick="calc(this)">É muito perigoso se envolver
+                            em conflitos de terra. O melhor é não protestar, deixando o assunto somente a cargo das
+                            instituições governamentais.</p>
+                        <p class="resposta" data-pos="7" data-val="+15" onclick="calc(this)">No que diz respeito ao modo
+                            como os povos indígenas vêm sendo tratados no Brasil, é preciso haver tanto ativismo digital
+                            quanto ações populares nas ruas. Quanto mais pessoas se envolvem em uma causa, menores são
+                            as chances de haver retaliações.</p>
+                        <p class="resposta" data-pos="7" data-val="+10" onclick="calc(this)"> Embora seja perigoso se
+                            envolver em conflitos de terra, não é possível não protestar contra a redução proposital dos
+                            povos indígenas. O mínimo a ser feito é um ativismo digital sobre essa questão.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao ">9</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <p class="pergunta">Um grupo de ativistas veganos, em 2019, fez uma manifestação em Campo Grande
+                            (MS) conhecida como o “Cubo da verdade”. Trata-se de um movimento criado na Austrália pelo
+                            grupo Anonymous for the Voiceless (Anônimos pelos sem voz) e cuja intenção é mostrar a
+                            exploração animal às pessoas nas ruas para, a partir disso, criar um diálogo com elas.
+                            Mascarados, os ativistas permanecem parados com notebooks que exibem imagens fortes de
+                            práticas locais de exploração dos animais. A respeito de iniciativas como essa, assinale a
+                            alternativa com a qual você concorda.</p>
+                        <div class="img09 hidden"></div>
+                        <p class="resposta" data-pos="8" data-val="+5" onclick="calc(this)"> Iniciativas como essa são
+                            desnecessárias. Cada um escolhe o que comer, não importando se isso afeta outros seres vivos
+                            ou o sistema ambiental.</p>
+                        <p class="resposta" data-pos="8" data-val="+10" onclick="calc(this)">Iniciativas como essa são
+                            importantes. São pacíficas e levam ao grande público uma consciência que talvez as pessoas
+                            não tenham a respeito de certas práticas.</p>
+                        <p class="resposta" data-pos="8" data-val="+15" onclick="calc(this)">Iniciativas como essa são
+                            imprescindíveis. A exploração animal para o consumo é um dos grandes problemas da humanidade
+                            e está relacionada a sérios problemas ambientais, como as queimadas de áreas de preservação
+                            florestal, tão importantes para a manutenção da vida. </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao">
+                        <p id="marcador01" class="marcacao">10</p>
+                        <p class="de">/10</p>
+                    </div>
+                    <div class="column is-10">
+                        <p class="pergunta">Assinale a alternativa que melhor resume o que você pensa a respeito do
+                            ativismo.</p>
+                        <p class="resposta" data-pos="9" data-val="+15" onclick="calc(this)">É imprescindível. Nos dias
+                            de hoje, representa a maior expressão de liberdade democrática. </p>
+                        <p class="resposta" data-pos="9" data-val="+10" onclick="calc(this)">É importante. Abre a
+                            possibilidade de discussão sobre temas relevantes para que haja justiça e equidade social.
+                        </p>
+                        <p class="resposta" data-pos="9" data-val="+5" onclick="calc(this)">É desnecessário</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="questoes hidden">
+                <div class="columns is-centered">
+                    <div class="column is-1 numeracao_resultado">
+                        <p id="marcador01" class="marcacao marca-resultado">Resultado</p>
+                    </div>
+                    <div class="column is-10">
+                        <p class="feedback"></p>
+                        <p class="again"></p>
+
+                        <div class="button refresh">REINICIAR</div>
+
+                        <div class="resultado">
+                            <h2>0</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
